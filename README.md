@@ -7,3 +7,6 @@ for run use:
 
 for search in ubuntu:
 1. find -type f -iname "somthing*"
+
+For Delete containers:
+- docker rm CONTAINERID 
