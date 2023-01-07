@@ -1,1 +1,3 @@
 
+docker exec -it -u Kimia 42ae5050631c bash
+Kimia@ID-Docker:/$ 
