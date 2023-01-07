@@ -1,3 +1,10 @@
 
-docker exec -it -u Kimia 42ae5050631c bash
+COMMAND:
+Ubuntu-OS@Username:~/../../AcDocker$ docker exec -it -u Kimia 42ae5050631c bash
+RESULT:
+Kimia@ID-Docker:/$ 
+
+if you want access to /etc/shadow this is Result:
+Kimia@ID-Docker:/$ cat /etc/shadow
+cat: /etc/shadow: Permission denied
 Kimia@ID-Docker:/$ 
