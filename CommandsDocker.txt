@@ -25,4 +25,4 @@ Images and Containers:
 ...
 
 
-Sample Web Application:
+Dockerfile Instructions:
