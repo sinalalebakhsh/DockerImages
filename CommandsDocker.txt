@@ -42,3 +42,7 @@ Dockerfile Instructions:
 Choosing the Right Base Image:
 1- In theproject build Dockerfile
 2- FROM (base-image)sample in https://docs.docker.com/samples/
+
+
+for run bash in node image:
+Ubuntu-OS@Username:~/../../AcDocker$ docker run -it react-app sh 
