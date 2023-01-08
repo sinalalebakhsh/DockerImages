@@ -61,3 +61,4 @@ Ubuntu-OS@Username:~/../../AcDocker$ docker run -it react-app sh
 
 Excluding Files and Directories:
 1-build file: .dockerignore
+2- write ingore big directorys like: node_modules/  
