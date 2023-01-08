@@ -49,3 +49,8 @@ Ubuntu-OS@Username:~/../../AcDocker$ docker run -it react-app sh
 
 
 Copying Files and Directories:
+In Dockerfile:
+FROM node:14.16.0-alpine3.13
+WORKDIR /app
+COPY . . 
+ADD . . 
