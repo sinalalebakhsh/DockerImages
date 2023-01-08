@@ -36,3 +36,6 @@ Dockerfile Instructions:
 -USER
 -CMD
 -ENTRYPOINT
+
+
+Choosing the Right Base Image 
