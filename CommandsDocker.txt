@@ -46,3 +46,6 @@ Choosing the Right Base Image:
 
 for run bash in node image:
 Ubuntu-OS@Username:~/../../AcDocker$ docker run -it react-app sh 
+
+
+Copying Files and Directories:
