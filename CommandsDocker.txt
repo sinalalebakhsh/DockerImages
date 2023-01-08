@@ -4,7 +4,9 @@ COMMAND:
 Run new image from one container:
 Ubuntu-OS@Username:~/../../AcDocker$ docker run -it ubuntu
 
-
+Start again a image from CONTAINER ID:
+Ubuntu-OS@Username:~/../../AcDocker$ docker start -i id-container
+root@id-container:/# 
 
 
 
