@@ -57,3 +57,6 @@ ADD . .
 
 run a image and access to Bash:
 Ubuntu-OS@Username:~/../../AcDocker$ docker run -it react-app sh
+
+
+Excluding Files and Directories
