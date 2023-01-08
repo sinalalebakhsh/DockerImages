@@ -1,5 +1,13 @@
 
 COMMAND:
+
+Run new image from one container:
+Ubuntu-OS@Username:~/../../AcDocker$ docker run -it ubuntu
+
+
+
+
+
 Ubuntu-OS@Username:~/../../AcDocker$ docker exec -it -u Kimia 42ae5050631c bash
 RESULT:
 Kimia@ID-Docker:/$ 
