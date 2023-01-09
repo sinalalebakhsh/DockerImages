@@ -65,3 +65,9 @@ Excluding Files and Directories:
 
 
 Running Commands:
+
+Dependencies of a project in Dockerfile: be like this:
+FROM node:14.16.0-alpine3.13
+WORKDIR /app
+COPY . . 
+RUN npm install
