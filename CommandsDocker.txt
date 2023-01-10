@@ -105,5 +105,8 @@ http//api.acronproject.com/
 
 
 ________________________________________________________________
-Exposing POrts:
+Exposing Ports:
+Write this end of Dockerfile:
+EXPOSE 3000
 
+________________________________________________________________
