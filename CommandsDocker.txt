@@ -74,4 +74,34 @@ COPY . .
 RUN npm install
 
 ________________________________________________________________
-Setting Environment Variables
+Setting Environment Variables:
+
+In Dockerfile:
+FROM node:14.16.0-alpine3.13
+WORKDIR /app
+COPY . .
+RUN npm install
+ENV API_URL=http//api.acronproject.com/
+
+In CLI:
+/app # printenv 
+NODE_VERSION=XXX
+HOSTNAME=XXX
+YARN_VERSION=XXX
+SHLVL=XXX
+HOME=XXX
+TERM=XXX
+PATH=XXX
+PWD=/app
+API_URL=http//api.acronproject.com/
+
+/app # echo $API_URL
+http//api.acronproject.com/
+
+/app # printenv API_URL
+http//api.acronproject.com/
+
+/app # 
+
+
+________________________________________________________________
