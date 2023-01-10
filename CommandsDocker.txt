@@ -110,3 +110,4 @@ Write this end of Dockerfile:
 EXPOSE 3000
 
 ________________________________________________________________
+Setting the User:
