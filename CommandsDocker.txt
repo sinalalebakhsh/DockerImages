@@ -1,31 +1,31 @@
 
 COMMAND:
 
+________________________________________________________________
 Run new image from one container:
 Ubuntu-OS@Username:~/../../AcDocker$ docker run -it ubuntu
 Or:
 Ubuntu-OS@Username:~/../../AcDocker$ docker run -it react-app
 
+________________________________________________________________
 Start again a image from CONTAINER ID:
 Ubuntu-OS@Username:~/../../AcDocker$ docker start -i id-container
 root@id-container:/# 
-
-
 Ubuntu-OS@Username:~/../../AcDocker$ docker exec -it -u Kimia 42ae5050631c bash
 RESULT:
 Kimia@ID-Docker:/$ 
 
-
+________________________________________________________________
 if you want access to /etc/shadow this is Result:
 Kimia@ID-Docker:/$ cat /etc/shadow
 cat: /etc/shadow: Permission denied
 Kimia@ID-Docker:/$ 
 
-
+________________________________________________________________
 Images and Containers:
 ...
 
-
+________________________________________________________________
 Dockerfile Instructions:
 -FROM
 -WORKDIR
@@ -38,16 +38,16 @@ Dockerfile Instructions:
 -CMD
 -ENTRYPOINT
 
-
+________________________________________________________________
 Choosing the Right Base Image:
 1- In theproject build Dockerfile
 2- FROM (base-image)sample in https://docs.docker.com/samples/
 
-
+________________________________________________________________
 for run bash in node image:
 Ubuntu-OS@Username:~/../../AcDocker$ docker run -it react-app sh 
 
-
+________________________________________________________________
 Copying Files and Directories:
 In Dockerfile:
 FROM node:14.16.0-alpine3.13
@@ -55,15 +55,16 @@ WORKDIR /app
 COPY . . 
 ADD . . 
 
+________________________________________________________________
 run a image and access to Bash:
 Ubuntu-OS@Username:~/../../AcDocker$ docker run -it react-app sh
 
-
+________________________________________________________________
 Excluding Files and Directories:
 1-build file: .dockerignore
 2- write ingore big directorys like: node_modules/  
 
-
+________________________________________________________________
 Running Commands: این قسمت ممکنه زمان ببره Be patient
 
 Dependencies of a project in Dockerfile: be like this:
@@ -71,3 +72,6 @@ FROM node:14.16.0-alpine3.13
 WORKDIR /app
 COPY . . 
 RUN npm install
+
+________________________________________________________________
+Setting Environment Variables
