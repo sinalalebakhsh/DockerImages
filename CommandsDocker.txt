@@ -111,3 +111,5 @@ EXPOSE 3000
 
 ________________________________________________________________
 Setting the User:
+Write this end of Dockerfile:
+RUN addgroup app && adduser -S -G app app
