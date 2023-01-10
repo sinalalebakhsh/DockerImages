@@ -64,7 +64,7 @@ Excluding Files and Directories:
 2- write ingore big directorys like: node_modules/  
 
 
-Running Commands:
+Running Commands: این قسمت ممکنه زمان ببره Be patient
 
 Dependencies of a project in Dockerfile: be like this:
 FROM node:14.16.0-alpine3.13
