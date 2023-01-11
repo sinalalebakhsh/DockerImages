@@ -114,3 +114,5 @@ Setting the User:
 Write this end of Dockerfile:
 RUN addgroup app && adduser -S -G app app
 USER app
+________________________________________________________________
+Defining Entrypoint:
