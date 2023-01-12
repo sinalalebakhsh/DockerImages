@@ -114,5 +114,11 @@ Setting the User:
 Write this end of Dockerfile:
 RUN addgroup app && adduser -S -G app app
 USER app
+
 ________________________________________________________________
 Removing Images:
+Ubuntu-OS@Username:~/../../AcDocker$ docker image prune 
+WARNING! This will remove all dangling images.
+Are you sure you want to continue? [y/N] y
+Total reclaimed space: 0B
+sina-lalebakhsh@sinalalebakhsh:~/Desktop/AcDocker$ 
