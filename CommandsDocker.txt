@@ -153,3 +153,7 @@ ________________________________________________________________
 Sharing Images:
 For connect to docker hub
 Ubuntu-OS@Username:~/../../AcDocker$ docker login
+
+
+For update last tag use this:
+Ubuntu-OS@Username:~/../../AcDocker$ docker image app-developing:NEW-TAG0.0.2 Username-in-Docker-Hub/app-developing:NEW-TAG0.0.2
