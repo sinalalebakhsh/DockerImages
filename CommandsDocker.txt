@@ -161,3 +161,7 @@ Ubuntu-OS@Username:~/../../AcDocker$ docker image app-developing:NEW-TAG0.0.2 Us
 
 After above command, write this for pushing:  
 Ubuntu-OS@Username:~/../../AcDocker$ docker push Username-in-Docker-Hub/app-developing:NEW-TAG0.0.2
+
+
+________________________________________________________________
+Saving and Loading Images:
