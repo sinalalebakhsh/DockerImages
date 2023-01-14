@@ -151,3 +151,5 @@ Run 'docker image COMMAND --help' for more information on a command.
 
 ________________________________________________________________
 Sharing Images:
+For connect to docker hub
+Ubuntu-OS@Username:~/../../AcDocker$ docker login
