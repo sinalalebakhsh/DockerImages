@@ -157,3 +157,7 @@ Ubuntu-OS@Username:~/../../AcDocker$ docker login
 
 For update last tag use this:
 Ubuntu-OS@Username:~/../../AcDocker$ docker image app-developing:NEW-TAG0.0.2 Username-in-Docker-Hub/app-developing:NEW-TAG0.0.2
+
+
+After above command, write this for pushing:  
+Ubuntu-OS@Username:~/../../AcDocker$ docker push Username-in-Docker-Hub/app-developing:NEW-TAG0.0.2
