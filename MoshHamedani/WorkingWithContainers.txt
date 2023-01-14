@@ -8,3 +8,4 @@ Viewing the Logs:
 
 _________________________________________________________________________________
 Publishing Ports:
+Ubuntu-OS@Username:~/../../AcDocker$ docker run -d -p 8080:3000 --name c1 ac-docker
