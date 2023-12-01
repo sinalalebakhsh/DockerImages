@@ -1,0 +1,154 @@
+Docker access to deamon:
+    1- sudo groupadd docker
+    2- sudo usermod -aG docker $USER
+    3- newgrp docker
+OR: https://docs.docker.com/engine/security/rootless/
+    1- sudo apt install uidmap
+    2- id -u
+    1001
+    3- whoami
+    testuser
+    4- grep ^$(whoami): /etc/subuid
+    testuser:231072:65536
+    5- grep ^$(whoami): /etc/subgid
+    testuser:231072:65536
+OR: Run dockerd-rootless-setuptool.sh install as a non-root user to set up the daemon:
+    dockerd-rootless-setuptool.sh install
+    [INFO] Creating /home/testuser/.config/systemd/user/docker.service
+    ...
+    [INFO] Installed docker.service successfully.
+    [INFO] To control docker.service, run: `systemctl --user (start|stop|restart) docker.service`
+    [INFO] To run docker.service on system startup, run: `sudo loginctl enable-linger testuser`
+    [INFO] Make sure the following environment variables are set (or add them to ~/.bashrc):
+    export PATH=/usr/bin:$PATH
+    export DOCKER_HOST=unix:///run/user/1000/docker.sock
+
+IF:
+    If dockerd-rootless-setuptool.sh is not present, 
+    you may need to install the docker-ce-rootless-extras package manually, e.g.:
+    sudo apt-get install -y docker-ce-rootless-extras
+
+Uninstall:
+    dockerd-rootless-setuptool.sh uninstall
+
+Usage
+Daemon:
+    systemctl --user start docker
+
+To launch the daemon on system startup:
+    systemctl --user enable docker
+    sudo loginctl enable-linger $(whoami)
+
+Best practices
+Rootless Docker in Docker:
+    docker run -d --name dind-rootless --privileged docker:24.0-dind-rootless
+
+
+List of docker images:
+    docker images
+    |
+    |___e.g.Output:
+            REPOSITORY     TAG       IMAGE ID       CREATED        SIZE
+            golang-image   latest    777c40df1f34   7 hours ago    739MB
+            alpine         latest    b541f2080109   16 hours ago   7.33MB
+            golang         latest    0a6f00d0e413   9 days ago     815MB
+            ubuntu         latest    e4c58958181a   8 weeks ago    77.8MB
+
+
+
+docker ps -a
+docker ps rmi 
+
+
+
+a single command that will clean up any 
+resources — images, containers, volumes, and networks
+that are dangling (not tagged or associated with a container):
+    docker system prune
+
+Removing Containers:
+    docker ps -a
+    docker rm ID_or_Name ID_or_Name
+
+
+Go to in a container:
+    docker run -it ubuntu
+
+
+in Ubuntu container:
+    echo $0
+
+
+Managing Package:
+    1- apt update
+    2- apt install nano
+for uninstall nano:
+    1- apt remove nano
+
+
+
+build or create an image from Dockerfile:
+    docker build -t AliasNameProject
+
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+Source:
+    https://docs.docker.com/engine/reference/commandline/cli/
+
+
+what I need for webapplication Django , GO , mongoDB ?
+
+Django:
+    https://hub.docker.com/_/python  
+    OR  
+    docker pull python
+    
+    https://pip.pypa.io/en/stable/installation/
+    https://pypi.org/project/pipenv/
+
+in current directory:
+    pipenv install 
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+go:
+    https://hub.docker.com/_/golang 
+    OR 
+    docker pull golang
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+ubuntu:
+    https://hub.docker.com/_/ubuntu
+    OR
+    docker pull ubuntu
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+mongoDB express
+    https://hub.docker.com/_/mongo-express
+    OR
+    docker pull mongo-express
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+mongoDB
+    https://hub.docker.com/_/mongo
+    OR
+    docker pull mongo
+
+
+
+where is location ?
+    docker info
+    OR
+    /var/lib/docker/
+
+for delete from roooot!!:
+ATTENTION don't have mistake!
+    1- sudo service docker stop
+    2- docker rm $(docker ps -a -q)
+
+***** ATTENTION *****
+Remove all dangling (unused) images:
+    3- docker image prune
+
+***** ATTENTION *****
+Delete Leftover Files (Caution!):
+    4- sudo rm -rf /var/lib/docker/overlay2/*
+
+    5- sudo service docker start
+
+

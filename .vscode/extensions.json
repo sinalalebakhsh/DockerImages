@@ -1,0 +1,12 @@
+{
+    "recommendations": [
+        "beardedbear.beardedicons",
+        "beardedbear.beardedtheme",
+        "ms-python.black-formatter",
+        "ms-azuretools.vscode-docker",
+        "golang.go",
+        "goplus.gop",
+        "mongodb.mongodb-vscode",
+        "ms-python.python"
+    ]
+}

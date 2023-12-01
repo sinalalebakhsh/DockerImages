@@ -1,0 +1,18 @@
+Instruction:
+Start with an OS
+Install Node
+Copy app files
+Run node app.js
+
+
+docker build -t NameImageCustom . 
+Result: image will download/install
+
+
+show images:
+    docker image ls
+
+
+docker run NameImageCustom
+Result: docker will run
+
