@@ -128,7 +128,22 @@ mongoDB
     https://hub.docker.com/_/mongo
     OR
     docker pull mongo
-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+Nginx: 
+    https://hub.docker.com/_/nginx
+    OR
+    docker pull nginx
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+Nginx:
+    https://hub.docker.com/r/nginxinc/nginx-unprivileged
+    OR
+    docker pull nginxinc/nginx-unprivileged
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+Nginx: unit
+    https://hub.docker.com/_/unit
+    OR
+    docker pull unit
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 
 where is location ?
