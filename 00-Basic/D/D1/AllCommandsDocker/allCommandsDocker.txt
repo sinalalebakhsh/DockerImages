@@ -144,7 +144,11 @@ Nginx: unit
     OR
     docker pull unit
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-
+wordpress:
+    https://hub.docker.com/_/wordpress
+    OR
+    docker pull wordpress
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 where is location ?
     docker info
