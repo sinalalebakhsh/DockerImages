@@ -1,0 +1,7 @@
+for iunstall dipendency
+
+1- npm install
+
+
+for run
+2- npm start 
