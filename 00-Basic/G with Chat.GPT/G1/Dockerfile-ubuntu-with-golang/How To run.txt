@@ -1,0 +1,83 @@
+1- 
+    docker build -t your-image-name .
+
+
+
+2- 
+    docker run -it your-image-name
+
+
+*** Replace container_id_or_name with the actual ID or name of your running container. 
+|
+3- To enter a running Docker container, you can use the docker exec command. Here's an example:
+    docker exec -it container_id_or_name /bin/bash
+
+
+*** If you want to find the ID or name of your running container
+4- Optional:
+    docker ps -a
+
+
+
+===================
+
+
+
+To rename a Docker image?
+syntax:
+    docker tag old_image_name[:old_tag] new_image_name[:new_tag]
+
+e.g.
+    docker tag old_image_name:old_tag new_image_name:new_tag
+
+
+
+
+how can I create image from a container is run right now ?
+1-
+    docker ps
+
+2-
+Syntax:
+    docker commit <container_id_or_name> my-custom-image:tag
+
+e.g.
+    docker commit my-container my-custom-image:v1
+
+
+
+
+
+
+Can I shut down a container like a operation system actualy ?
+
+syntax
+docker stop <container_id_or_name>
+
+
+
+
+how can I export a docker image to my choice directory, be like my flash memory or any other?
+Save the Docker Image:
+    docker save -o /path/to/your/directory/image_name.tar image_name:tag
+
+For example:
+    docker save -o ~/myflash/image_example.tar my_docker_image:latest
+
+
+Copy or Move the Tarball:
+After saving the image as a tarball, 
+you can copy or move it to your flash memory or any other location using the cp or mv command.
+
+    cp /path/to/your/directory/image_name.tar /path/to/flash/memory/
+OR
+    mv /path/to/your/directory/image_name.tar /path/to/flash/memory/
+
+
+
+Load the Docker Image on Another Machine:
+    docker load -i /path/to/flash/memory/image_name.tar
+    
+
+
+
