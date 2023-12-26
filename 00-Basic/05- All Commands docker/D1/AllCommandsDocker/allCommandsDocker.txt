@@ -171,3 +171,26 @@ Delete Leftover Files (Caution!):
     5- sudo service docker start
 
 
+
+
+Store images
+============================================================
+1. Save Docker Images to Tarballs: In terminal
+    docker save -o /path/to/external/drive/image_name.tar image_name
+
+
+============================================================
+2. Copy Tarballs to External Hard Drive:
+    cp /path/to/external/drive/image_name.tar /path/to/external/drive/destination_folder/
+
+
+============================================================
+3. Load Docker Images from Tarballs:
+    docker load -i /path/to/external/drive/destination_folder/image_name.tar
+
+
+
+
+
+
+
